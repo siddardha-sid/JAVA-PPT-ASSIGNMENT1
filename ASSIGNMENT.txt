@@ -1,0 +1,127 @@
+1)What is the difference between Compiler and Interpreter?
+
+Compiler -> It is a software which takes sourcecode(HLL) as the input and generates MLL code as the ouput
+            To convert the HLL code to MLL code compiler will scan the HLL code only once.
+
+Interpreter =>It is a software which takes sourcecode(HLL) as the input and generates MLL code as the ouput
+              To convert the HLL code to MLL code interpreter will scan the HLL code mulitple times(depends on the instrcutions). 
+              On the other hand, an interpreter directly executes the source code line by line without prior translation.
+              It reads the source code, interprets each statement, and executes it immediately. 
+
+
+
+
+2)What is the difference between JDK, JRE, and JVM?
+
+JDK :
+The JDK is a software package that provides tools necessary for Java application development. It includes the Java compiler (javac), which translates Java source code into bytecode, and other development tools like debuggers, bundlers, and documentation generators. The JDK is required for writing, compiling, and packaging Java applications. It also includes the JRE (Java Runtime Environment) as a subset. In summary, the JDK is for Java developers who want to create Java applications.
+
+JRE :
+The JRE is a software package that provides the runtime environment for executing Java applications. It includes the Java Virtual Machine (JVM), class libraries, and other supporting files required to run Java programs. The JRE does not include development tools like compilers or debuggers; it is intended for end-users who only need to run Java applications. In summary, the JRE is for users who want to run Java applications but not develop them.
+
+JVM :
+The JVM is an integral part of both the JDK and JRE. It is a virtual machine that executes Java bytecode. The JVM provides a runtime environment that abstracts the underlying hardware and operating system, allowing Java programs to run on any platform that has a compatible JVM installed. The JVM performs various tasks such as bytecode verification, memory management, and garbage collection. It provides the runtime execution environment for Java applications, ensuring their platform independence.
+
+
+
+
+
+
+3)How many types of memory areas are allocated by JVM?
+
+Heap Memory: The heap is a memory area where objects are dynamically allocated. It is the runtime data area from which memory for most Java objects is allocated and reclaimed through garbage collection. The heap is shared among all threads in a Java application.
+
+Method Area (also known as Permanent Generation or Metaspace): The method area stores class-level data, such as the bytecode of methods, constant pool, field and method data, and other static data. 
+
+Java Stack: Each thread in a Java application has its own stack, referred to as the Java stack. The Java stack holds local variables, method parameters, and method invocations. Each method call in Java creates a new stack frame, which contains information about the method call and the data associated with it. The Java stack is used for method invocations and local variable storage.
+
+PC Register: The PC (Program Counter) register contains the address of the currently executing JVM instruction. It is specific to each thread and is used to keep track of the current position in the bytecode.
+
+Native Method Stack: The native method stack is used for executing native (non-Java) methods. It stores data related to the execution of native code.
+
+
+
+
+
+4)What is JIT compiler?
+JIT stands for Just-In-Time. A JIT compiler is a component of the Java Virtual Machine (JVM) that dynamically compiles Java bytecode into machine code during runtime, just before it is executed. The JIT compiler optimizes and translates sections of the bytecode that are frequently executed into machine code, improving the overall performance of the Java program.
+
+
+
+
+5)What are the various access specifiers in Java?
+public,private,protected,default are the access specifiers in java.
+
+6)What is a compiler in Java?
+In Java, a compiler is a software program that translates Java source code written in a high-level programming language into a lower-level representation known as bytecode. The compiler is part of the Java Development Kit (JDK) and is responsible for converting human-readable Java code into a format that can be executed by the Java Virtual Machine (JVM).javac is th name of the compiler
+
+
+7)Q7.Explain the types of variables in Java?
+Local Variables: Local variables are declared within a method, constructor, or a block of code. They are accessible only within the block in which they are declared. Local variables are not accessible outside the block and are typically used to store temporary data during the execution of a method or block.
+
+Instance Variables (Non-static Variables): Instance variables are declared within a class but outside any method, constructor, or block. They are associated with an instance or object of the class. Each object of the class has its own copy of instance variables. Instance variables have default values if not explicitly initialized and retain their values throughout the lifetime of the object.
+
+Static Variables (Class Variables): Static variables are declared using the "static" keyword. They belong to the class itself rather than instances of the class. There is only one copy of a static variable shared by all objects of the class. Static variables are initialized once and retain their values throughout the program's execution. They are commonly used for constants or for storing data that needs to be shared across instances of a class.
+
+Parameters: Parameters are variables that are declared in a method or constructor's signature and are used to pass values to methods or constructors. They act as placeholders for the values that are passed during method or constructor invocation. Parameters are local variables that are accessible only within the method or constructor.
+
+Class Constants: Class constants, also known as static final variables, are declared using the "static final" keywords. They represent fixed values that do not change throughout the program's execution. Class constants are typically used for storing values that are shared by multiple instances of a class and are declared as public so that they can be accessed by other classes.
+
+
+
+9)What are the identifiers in java?
+identifer is a name in java program.
+ identifer can be classname,methodname,variablename,labelname.
+
+eg::
+class Demo
+{
+	public static void main(String[] args)
+	{
+		int x = 10;
+	}
+}
+
+Demo: classname
+main: methodName
+String: className
+args  : variablename
+x : variableName
+
+What are the rules followed to define a java identifier?
+  => The only character allowed for java identifiers is 
+  => a to z, A to Z,0 to 9,$,_
+  
+Can identifier start with digits? No
+Is there a restriction on the lenght of identifiers? No
+We can't use reserve words as an identifer.
+We can use inbuilt classnames and variablenames as identifiers,but it is not a good practise to use.
+
+
+
+
+8)What are the Datatypes in Java?
+In Java, there are eight primitive data types that represent basic types of data, along with the reference types. Here are the data types in Java:
+
+Primitive Data Types:
+
+boolean: Represents a boolean value, either true or false.
+byte: Represents a signed 8-bit integer.
+short: Represents a signed 16-bit integer.
+int: Represents a signed 32-bit integer.
+long: Represents a signed 64-bit integer.
+float: Represents a single-precision 32-bit floating-point number.
+double: Represents a double-precision 64-bit floating-point number.
+char: Represents a single Unicode character.
+Reference Data Types:
+
+Class types: Represents objects of a specific class. Example: String, Date, ArrayList, etc.
+Arrays: Represents a collection of elements of the same type arranged in a sequential manner.
+Interfaces: Represents a contract that a class can implement.
+Enumerations: Represents a fixed set of values defined by an enumeration type.
+null: Represents the absence of a value or a null reference.
+
+
+
+
+10)
